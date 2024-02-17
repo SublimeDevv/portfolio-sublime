@@ -8,8 +8,8 @@ export default function App() {
   const [firstName, lastName] = fullName.split("Mendoza Gutiérrez");
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4">
-      <section className="max-w-6xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg">
+    <main className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4">
+      <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden">
         <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
           <ul className="flex justify-center items-center h-full font-normal text-[20px]">
             <li className="mx-4 lg:mx-8">
@@ -49,15 +49,20 @@ export default function App() {
 
         <div className="p-16">
           {/* aqui va lo que te estoy pidiendo */}
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col">
-              <h1 className="text-4xl font-bold mb-6 text-center">
-                {/* Mostrar el primer nombre normal y el apellido con otro color */}
-                {firstName}
-                <span style={{ color: "rgba(43, 126, 220)" }}>
-                  Mendoza Gutiérrez
-                </span>
-              </h1>
+          <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="mb-6 md:mb-0 md:mr-6">
+              <img
+                className="w-60 h-60  p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+                src="/juan.png"
+                alt="Bordered avatar"
+              />
+            </div>
+
+            <div className="flex flex-col items-center justify-center">
+            <h1 className="text-3xl text-center md:text-4xl font-bold mb-6">
+            {firstName}
+            <span className="text-blue-500"> Mendoza Gutiérrez</span>
+          </h1>
               <div className="justify-center flex flex-wrap gap-8 text-[30px] text-gray-300">
                 {icons.socialNetworks.map((icon, index) => (
                   <a
@@ -67,7 +72,7 @@ export default function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className={Object.values(icon)[0]}>{/* Icono */}</i>
+                    <i className={Object.values(icon)[0]}></i>
                   </a>
                 ))}
               </div>
@@ -75,14 +80,6 @@ export default function App() {
                 +2 años de experiencia. Desarrollador de software
                 multiplataforma. De México, Cancún. 🇲🇽
               </h1>
-            </div>
-
-            <div className="ml-6">
-              <img
-                className="w-60 h-60 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
-                src="/juan.png"
-                alt="Bordered avatar"
-              />
             </div>
           </div>
 
@@ -92,7 +89,7 @@ export default function App() {
 
           {/* {seccion} */}
           <h1 className="text-4xl font-bold mb-4 text-center mt-10">
-            Acerca de mi
+            Acerca de mí
           </h1>
           <p className="mb-4">{info.about}</p>
 
@@ -214,75 +211,94 @@ export default function App() {
           Tecnologías que domino
         </h1>
 
-        <div className="mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 text-center">
-          <div className="relative mb-12 px-3 lg:mb-0">
-            <div className="mb-2 flex justify-center">
-              <span className="text-primary text-7xl">
-                <i className="nf nf-dev-database"></i>
-              </span>
+        <div className="mb-20 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 text-center gap-4">
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-dev-database"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">
+                {icons.databases.length}
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Bases de datos
+              </h6>
             </div>
-            <h5 className="mb-6 font-bold text-primary">
-              {icons.databases.length}
-            </h5>
-            <h6 className="mb-0 font-normal dark:text-neutral-50">
-              Bases de Datos
-            </h6>
-            <div className="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
           </div>
-          <div className="relative mb-12 px-3 lg:mb-0">
-            <div className="mb-2 flex justify-center">
-              <span className="text-primary text-7xl">
-                <i className="nf nf-cod-terminal_linux"></i>
-              </span>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-cod-terminal_linux"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">{icons.os.length}</h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50">
+                Sistemas operativos
+              </h6>
             </div>
-            <h5 className="mb-6 font-bold text-primary">{icons.os.length}</h5>
-            <h6 className="mb-0 font-normal dark:text-neutral-50">
-              Sistemas operativos
-            </h6>
-            <div className="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
           </div>
-
-          <div className="relative mb-12 px-3 lg:mb-0">
-            <div className="mb-2 flex justify-center">
-              <span className="text-primary text-7xl">
-                <i className="nf nf-cod-tools"></i>
-              </span>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-cod-tools"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">
+                {icons.tools.length}
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50">
+                Herramientas de desarrollo
+              </h6>
             </div>
-            <h5 className="mb-6 font-bold text-primary">
-              {icons.tools.length}
-            </h5>
-            <h6 className="mb-0 font-normal dark:text-neutral-50">
-              Herramientas
-            </h6>
-            <div className="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
           </div>
-
-          <div className="relative mb-12 px-3 lg:mb-0">
-            <div className="mb-2 flex justify-center">
-              <span className="text-primary text-7xl">
-                <i className="nf nf-md-language_xaml"></i>
-              </span>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-md-language_xaml"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">
+                {icons.languages.length}
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50">
+                Lenguajes de programación
+              </h6>
             </div>
-            <h5 className="mb-6 font-bold text-primary">
-              {icons.languages.length}
-            </h5>
-            <h6 className="mb-0 font-normal dark:text-neutral-50">
-              Lenguajes de programación
-            </h6>
-            <div className="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
           </div>
-          <div className="relative mb-12 px-3 lg:mb-0">
-            <div className="mb-2 flex justify-center">
-              <span className="text-primary text-7xl">
-                <i className="nf nf-md-electron_framework"></i>
-              </span>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-md-electron_framework"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">
+                {icons.frameworks.length}
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50">
+                Frameworks de desarollo
+              </h6>
             </div>
-            <h5 className="mb-6 font-bold text-primary">
-              {icons.frameworks.length}
-            </h5>
-            <h6 className="mb-0 font-normal dark:text-neutral-50">
-              Frameworks
-            </h6>
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-12 px-3 lg:mb-0">
+              <div className="mb-2 flex justify-center">
+                <span className="text-primary text-7xl">
+                  <i className="nf nf-md-microsoft_office"></i>
+                </span>
+              </div>
+              <h5 className="mb-6 font-bold text-primary">
+                {icons.frameworks.length}
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50">
+                Herramientas de ofimática
+              </h6>
+            </div>
           </div>
         </div>
 
