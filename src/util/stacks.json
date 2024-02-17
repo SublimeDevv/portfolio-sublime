@@ -1,0 +1,237 @@
+{
+  "frontend": [
+    {
+      "JavaScript": "nf nf-dev-javascript_badge",
+      "name": "JavaScript",
+      "color": "text-yellow-500"
+    },
+
+    {
+      "HTML5": "nf nf nf-dev-html5",
+      "name": "HTML5",
+      "color": "text-orange-500"
+    },
+    {
+      "CSS3": "nf nf-dev-css3",
+      "name": "CSS3",
+      "color": "text-blue-500"
+    },
+    {
+      "PHP": "nf nf-dev-php",
+      "name": "PHP",
+      "color": "text-purple-500"
+    },
+    {
+      "React": "nf nf-dev-react",
+      "name": "React",
+      "color": "text-blue-500"
+    },
+    {
+      "Laravel": "nf nf-md-laravel",
+      "name": "Laravel",
+      "color": "text-red-400"
+    },
+    {
+      "Tailwind": "nf nf-md-tailwind",
+      "name": "Tailwind",
+      "color": "text-cyan-400"
+    }
+  ],
+  "backend": [
+    {
+      "Python": "nf nf-dev-python",
+      "name": "Python",
+      "color": "text-blue-800"
+    },
+    {
+      "TypeScript": "nf nf-md-language_typescript",
+      "name": "TypeScript",
+      "color": "text-blue-500"
+    },
+    {
+      "C#": "nf nf-seti-c_sharp",
+      "name": "C#",
+      "color": "text-purple-500"
+    },
+    {
+      "C++": "nf nf-md-language_cpp",
+      "name": "C++",
+      "color": "text-blue-900"
+    },
+    {
+      "PHP": "nf nf-dev-php",
+      "name": "PHP",
+      "color": "text-purple-500"
+    },
+    {
+      "Rust": "nf nf-dev-rust",
+      "name": "Rust",
+      "color": "text-white"
+    },
+    {
+      "Java": "nf nf-dev-java",
+      "name": "Java",
+      "color": "text-red-500"
+    }
+  ],
+  "tools": [
+    {
+      "Shell": "nf nf-dev-terminal",
+      "name": "Shell",
+      "color": "text-white"
+    },
+    {
+      "nodejs": "nf nf-md-nodejs",
+      "name": "Node.js",
+      "color": "text-green-500"
+    },
+
+    {
+      "git": "nf nf-dev-git",
+      "name": "Git",
+      "color": "text-orange-500"
+    },
+    {
+      "webpack": "nf nf-md-webpack",
+      "name": "Webpack",
+      "color": "text-blue-800"
+    },
+    {
+      "npm": "nf nf-dev-npm",
+      "name": "NPM",
+      "color": "text-red-500"
+    },
+    {
+      "yarn": "nf nf-seti-yarn",
+      "name": "Yarn",
+      "color": "text-blue-400"
+    },
+    {
+      "docker": "nf nf-md-docker",
+      "name": "Docker",
+      "color": "text-blue-700"
+    },
+    {
+      "vscode": "nf nf-md-microsoft_visual_studio_code",
+      "name": "VSCode",
+      "color": "text-blue-800"
+    },
+
+    {
+      "vim": "nf nf-dev-vim",
+      "name": "Vim",
+      "color": "text-green-700"
+    }
+  ],
+  "os": [
+    {
+      "Arch Linux": "nf nf-md-arch",
+      "name": "Arch Linux",
+      "color": "text-blue-800"
+    },
+    {
+      "Windows": "nf nf-custom-windows",
+      "name": "Windows",
+      "color": "text-blue-400"
+    },
+    {
+      "Ubuntu": "nf nf-dev-ubuntu",
+      "name": "Ubuntu",
+      "color": "text-orange-500"
+    },
+    {
+      "Debian": "nf nf-dev-debian",
+      "name": "Debian",
+      "color": "text-red-300"
+    },
+    {
+      "Fedora": "nf nf-linux-fedora",
+      "name": "Fedora",
+      "color": "text-green-300"
+    },
+    {
+      "CentOS": "nf nf-linux-centos",
+      "name": "CentOS",
+      "color": "text-green-600"
+    },
+    {
+      "Kali Linux": "nf nf-linux-kali_linux",
+      "name": "Kali Linux",
+      "color": "text-red-500"
+    },
+    {
+      "Mint": "nf nf-md-linux_mint",
+      "name": "Mint",
+      "color": "text-green-500"
+    },
+    {
+      "Manjaro": "nf nf-linux-manjaro",
+      "name": "Manjaro",
+      "color": "text-green-500"
+    }
+  ],
+  "databases": [
+    {
+      "firebase": "nf nf-md-firebase",
+      "name": "Firebase BD",
+      "color": "text-yellow-500"
+    },
+    {
+      "MySQL": "nf nf-dev-mysql",
+      "name": "MySQL",
+      "color": "text-blue-500"
+    },
+    {
+      "MongoDB": "nf nf-dev-mongodb",
+      "name": "MongoDB",
+      "color": "text-green-600"
+    },
+    {
+      "PostgreSQL": "nf nf-dev-postgresql",
+      "name": "PostgreSQL",
+      "color": "text-blue-400"
+    },
+    {
+      "SQLite": "nf nf-dev-sqllite",
+      "name": "SQLite",
+      "color": "text-blue-500"
+    },
+    {
+      "Redis": "nf nf-dev-redis",
+      "name": "Redis",
+      "color": "text-red-500"
+    }
+  ],
+  "office": [
+    {
+      "Word": "nf nf-seti-word",
+      "name": "Word",
+      "color": "text-blue-500"
+    },
+    {
+      "Excel": "nf nf-md-microsoft_excel",
+      "name": "Excel",
+      "color": "text-green-500"
+    },
+    {
+      "PowerPoint": "nf nf-md-file_powerpoint",
+      "name": "PowerPoint",
+      "color": "text-red-500"
+    },
+    {
+      "Outlook": "nf nf-md-microsoft_outlook",
+      "name": "Outlook",
+      "color": "text-blue-500"
+    },
+    {
+      "Access": "nf nf-md-microsoft_access",
+      "name": "Access",
+      "color": "text-red-500"
+    },
+    {
+      "OneNote": "nf nf-md-microsoft_onenote",
+      "name": "OneNote",
+      "color": "text-blue-500"
+    }
+  ]
+}

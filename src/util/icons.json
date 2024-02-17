@@ -100,7 +100,11 @@
       "color": "text-red-500"
     }
   ],
-  "databases": [
+  "databases": [{
+    "firebase": "nf nf-md-firebase",
+    "name": "Firebase",
+    "color": "text-yellow-500"
+  },
     {
       "MySQL": "nf nf-dev-mysql",
       "name": "MySQL",
@@ -213,6 +217,38 @@
     {
       "Discord": "nf nf-md-discord",
       "url": "https://top.gg/user/220029357903249408"
+    }
+  ],
+  "office":  [
+    {
+      "Word": "nf nf-seti-word",
+      "name": "Word",
+      "color": "text-blue-500"
+    },
+    {
+      "Excel": "nf nf-md-microsoft_excel",
+      "name": "Excel",
+      "color": "text-green-500"
+    },
+    {
+      "PowerPoint": "nf nf-md-file_powerpoint",
+      "name": "PowerPoint",
+      "color": "text-red-500"
+    },
+    {
+      "Outlook": "nf nf-md-microsoft_outlook",
+      "name": "Outlook",
+      "color": "text-blue-500"
+    },
+    {
+      "Access": "nf nf-md-microsoft_access",
+      "name": "Access",
+      "color": "text-red-500"
+    },
+    {
+      "OneNote": "nf nf-md-microsoft_onenote",
+      "name": "OneNote",
+      "color": "text-blue-500"
     }
   ]
 }

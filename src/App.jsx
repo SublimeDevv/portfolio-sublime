@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import icons from "./util/icons.json";
 import info from "./util/info.json";
+import stacks from './util/stacks.json'
 
 export default function App() {
   const fullName = "Juan Diego Mendoza Gutiérrez";
@@ -10,7 +11,7 @@ export default function App() {
   return (
     <main className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4">
       <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg">
-      {/* <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
+        {/* <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
           <ul className="flex justify-center items-center h-full font-normal text-[20px]">
             <li className="mx-4 lg:mx-8">
               <a
@@ -59,10 +60,10 @@ export default function App() {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl text-center md:text-4xl font-bold mb-6">
-            {firstName}
-            <span className="text-blue-500"> Mendoza Gutiérrez</span>
-          </h1>
+              <h1 className="text-2xl text-center md:text-4xl font-bold mb-6">
+                {firstName}
+                <span className="text-blue-500"> Mendoza Gutiérrez</span>
+              </h1>
               <div className="justify-center flex flex-wrap gap-8  text-[20px] md:text-[30px] text-gray-300">
                 {icons.socialNetworks.map((icon, index) => (
                   <a
@@ -207,13 +208,11 @@ export default function App() {
 
         <hr className="my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
-
-
         <h1 className="text-4xl font-bold mb-10 text-center mt-10 ">
           Habilidades y tecnologías
         </h1>
 
-        <div className="mb-20 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 text-center gap-4">
+        <div className="mb-5 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 text-center gap-4">
           <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className="relative mb-12 px-3 lg:mb-0">
               <div className="mb-2 flex justify-center">
@@ -222,7 +221,7 @@ export default function App() {
                 </span>
               </div>
               <h5 className="mb-6 font-bold text-primary">
-                {icons.databases.length}
+              {"{ "+icons.databases.length+" }"} 
               </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
                 Bases de datos
@@ -236,7 +235,7 @@ export default function App() {
                   <i className="nf nf-cod-terminal_linux"></i>
                 </span>
               </div>
-              <h5 className="mb-6 font-bold text-primary">{icons.os.length}</h5>
+              <h5 className="mb-6 font-bold text-primary">  {"{ "+icons.os.length+" }"} </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50">
                 Sistemas operativos
               </h6>
@@ -250,7 +249,7 @@ export default function App() {
                 </span>
               </div>
               <h5 className="mb-6 font-bold text-primary">
-                {icons.tools.length}
+              {"{ "+icons.tools.length+" }"} 
               </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50">
                 Herramientas de desarrollo
@@ -265,7 +264,7 @@ export default function App() {
                 </span>
               </div>
               <h5 className="mb-6 font-bold text-primary">
-                {icons.languages.length}
+              {"{ "+icons.languages.length+" }"} 
               </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50">
                 Lenguajes de programación
@@ -280,7 +279,7 @@ export default function App() {
                 </span>
               </div>
               <h5 className="mb-6 font-bold text-primary">
-                {icons.frameworks.length}
+              {"{ "+icons.frameworks.length+" }"} 
               </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50">
                 Frameworks de desarollo
@@ -295,7 +294,7 @@ export default function App() {
                 </span>
               </div>
               <h5 className="mb-6 font-bold text-primary">
-                {icons.frameworks.length}
+              {"{ "+icons.office.length+" }"} 
               </h5>
               <h6 className="mb-0 font-normal dark:text-neutral-50">
                 Herramientas de ofimática
@@ -305,105 +304,221 @@ export default function App() {
         </div>
 
         {/* {Tech} */}
-        <div className="mb-10 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
-          {icons.frameworks.map((icon, index) => {
-            const [iconName, iconClass] = Object.values(icon);
-            const hoverColor = icon.color;
-            const tooltipText = icon.name;
+        <div className="mb-20 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-4">
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.frontend.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
 
-            return (
-              <a
-                key={index}
-                className={`tooltip hover:${hoverColor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className={iconName}>{/* Icono */}</i>
-                <span className="tooltiptext">{tooltipText}</span>{" "}
-              </a>
-            );
-          })}
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Stack de desarrollo Frontend
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Librerías, frameworks y lenguajes
+              </h6>
+            </div>
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.backend.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
+
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Stack de desarollo Backend
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Frameworks y lenguajes
+              </h6>
+            </div>
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.tools.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
+
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Stack de herramientas
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Editores de código, control de versiones, etc.
+              </h6>
+            </div>
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.os.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
+
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Sistemas operativos que domino
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Windows y distribuciones de Linux
+              </h6>
+            </div>
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.databases.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
+
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Bases de datos que domino
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                SQL y NoSQL
+              </h6>
+            </div>  
+          </div>
+          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="relative mb-16 px-3 lg:mb-0">
+              <div className=" flex justify-center">
+                <span className="text-primary text-7xl">
+                  <div className="mb-4 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
+                    {stacks.office.map((icon, index) => {
+                      const [iconName, iconClass] = Object.values(icon);
+                      const hoverColor = icon.color;
+                      const tooltipText = icon.name;
+
+                      return (
+                        <a
+                          key={index}
+                          className={`tooltip hover:${hoverColor}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={iconName}>{/* Icono */}</i>
+                          <span className="tooltiptext">
+                            {tooltipText}
+                          </span>{" "}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </span>
+              </div>
+              <h5 className="mb-2 font-bold text-primary">
+                Herramientas de ofimática
+              </h5>
+              <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+                Paquetería de Microsoft 365
+              </h6>
+            </div>
+          </div>
         </div>
+        {/* {Tech} */}
 
-        <div className="mb-10 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
-          {icons.databases.map((icon, index) => {
-            const [iconName, iconClass] = Object.values(icon);
-            const hoverColor = icon.color;
-            const tooltipText = icon.name;
-
-            return (
-              <a
-                key={index}
-                className={`tooltip hover:${hoverColor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className={iconName}>{/* Icono */}</i>
-                <span className="tooltiptext">{tooltipText}</span>{" "}
-              </a>
-            );
-          })}
-        </div>
-
-        <div className="mb-10 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
-          {icons.tools.map((icon, index) => {
-            const [iconName, iconClass] = Object.values(icon);
-            const hoverColor = icon.color;
-            const tooltipText = icon.name;
-
-            return (
-              <a
-                key={index}
-                className={`tooltip hover:${hoverColor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className={iconName}>{/* Icono */}</i>
-                <span className="tooltiptext">{tooltipText}</span>{" "}
-              </a>
-            );
-          })}
-        </div>
-
-        <div className="mb-10 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
-          {icons.os.map((icon, index) => {
-            const [iconName, iconClass] = Object.values(icon);
-            const hoverColor = icon.color;
-            const tooltipText = icon.name;
-
-            return (
-              <a
-                key={index}
-                className={`tooltip hover:${hoverColor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className={iconName}>{/* Icono */}</i>
-                <span className="tooltiptext">{tooltipText}</span>{" "}
-              </a>
-            );
-          })}
-        </div>
-
-        <div className="mb-10 justify-center flex flex-wrap gap-5 text-[40px] text-gray-300">
-          {icons.languages.map((icon, index) => {
-            const [iconName, iconClass] = Object.values(icon);
-            const hoverColor = icon.color;
-            const tooltipText = icon.name;
-
-            return (
-              <a
-                key={index}
-                className={`tooltip hover:${hoverColor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className={iconName}>{/* Icono */}</i>
-                <span className="tooltiptext">{tooltipText}</span>{" "}
-              </a>
-            );
-          })}
-        </div>
+       
       </section>
     </main>
   );
