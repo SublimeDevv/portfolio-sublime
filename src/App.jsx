@@ -10,7 +10,7 @@ export default function App() {
   return (
     <main className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4">
       <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg">
-      <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
+      {/* <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
           <ul className="flex justify-center items-center h-full font-normal text-[20px]">
             <li className="mx-4 lg:mx-8">
               <a
@@ -45,7 +45,7 @@ export default function App() {
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         <div className="p-16">
           {/* aqui va lo que te estoy pidiendo */}
