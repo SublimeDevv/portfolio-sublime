@@ -63,7 +63,7 @@ export default function App() {
             {firstName}
             <span className="text-blue-500"> Mendoza Gutiérrez</span>
           </h1>
-              <div className="justify-center flex flex-wrap gap-8 text-[30px] text-gray-300">
+              <div className="justify-center flex flex-wrap gap-8  text-[20px] md:text-[30px] text-gray-300">
                 {icons.socialNetworks.map((icon, index) => (
                   <a
                     key={index}
