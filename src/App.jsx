@@ -9,8 +9,8 @@ export default function App() {
 
   return (
     <main className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4">
-      <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden">
-        <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
+      <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg">
+      <nav className="sticky top-0 z-50 w-full h-20 bg-slate-800 rounded-lg">
           <ul className="flex justify-center items-center h-full font-normal text-[20px]">
             <li className="mx-4 lg:mx-8">
               <a
@@ -207,8 +207,10 @@ export default function App() {
 
         <hr className="my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
+
+
         <h1 className="text-4xl font-bold mb-10 text-center mt-10 ">
-          Tecnologías que domino
+          Habilidades y tecnologías
         </h1>
 
         <div className="mb-20 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 text-center gap-4">
