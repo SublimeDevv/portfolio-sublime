@@ -59,7 +59,7 @@ export default function App() {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-            <h1 className="text-3xl text-center md:text-4xl font-bold mb-6">
+            <h1 className="text-2xl text-center md:text-4xl font-bold mb-6">
             {firstName}
             <span className="text-blue-500"> Mendoza Gutiérrez</span>
           </h1>
