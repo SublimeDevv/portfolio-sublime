@@ -9,9 +9,22 @@ import "./../styles.css";
 const Modal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
+  const handleClose = (e) => {
+    e.stopPropagation();
+    onClose();
+  };
+
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div
+      className="modal-backdrop"
+      onClick={handleClose}
+      onTouchEnd={handleClose}
+    >
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+        onTouchEnd={(e) => e.stopPropagation()}
+      >
         <Swiper
           cssMode={true}
           navigation={true}
@@ -23,7 +36,7 @@ const Modal = ({ isOpen, onClose, images }) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={"/mockups/" + image} />
+              <img src={"/mockups/" + image} alt={`Image ${index}`} />
             </SwiperSlide>
           ))}
         </Swiper>
