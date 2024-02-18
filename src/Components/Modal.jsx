@@ -9,19 +9,8 @@ import "./../styles.css";
 const Modal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
-  const handleBackdropClick = (e) => {
-    // Asegúrate de que el clic proviene directamente del modal-backdrop y no de sus hijos
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
   return (
-    <div
-      className="modal-backdrop"
-      onClick={handleBackdropClick} // Manejador para cierre con clic
-      onTouchEnd={handleBackdropClick} // Manejador para cierre con toque
-    >
+    <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <Swiper
           cssMode={true}
@@ -34,7 +23,7 @@ const Modal = ({ isOpen, onClose, images }) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={"/mockups/" + image} alt={`Mockup ${index}`} />
+              <img src={"/mockups/" + image} />
             </SwiperSlide>
           ))}
         </Swiper>
