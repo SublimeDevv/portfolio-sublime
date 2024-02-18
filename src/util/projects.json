@@ -1,67 +1,208 @@
 [
-    {
-        "name": "Niux",
-        "description": "Tienda en línea de productos de tecnología. Proyecto colaborativo para la asignatura de Desarrollo de Aplicaciones Web.",
-        "github": "https://github.com/Angel-Guxman/niux_frontend",
-        "pictures": [
-            "login_niux.jpg", "order_niux.jpg", "dashboard_niux.jpg", "shop_niux.jpg", "cart_niux.jpg"
-        ],
-        "website": "https://niux.org",
-        "technologies": ["nf nf-md-nodejs", "nf nf-md-language_typescript", "nf nf-dev-javascript_badge", "nf nf-dev-postgresql", "nf nf-dev-react", "nf nf-md-tailwind", "nf nf-dev-css3", "nf nf-md-docker"
+  {
+    "name": "Niux",
+    "description": "Tienda en línea de productos de tecnología. Proyecto colaborativo para la asignatura de Desarrollo de Aplicaciones Web.",
+    "github": "https://github.com/Angel-Guxman/niux_frontend",
+    "pictures": [
+      "login_niux.jpg",
+      "order_niux.jpg",
+      "dashboard_niux.jpg",
+      "shop_niux.jpg",
+      "cart_niux.jpg"
+    ],
+    "website": "https://niux.org",
+    "technologies": [
+      {
+        "nodejs": "nf nf-md-nodejs",
+        "name": "Node.js",
+        "color": "text-green-500"
+      },
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "TypeScript": "nf nf-md-language_typescript",
+        "name": "TypeScript",
+        "color": "text-blue-500"
+      },
+      {
+        "PostgreSQL": "nf nf-dev-postgresql",
+        "name": "PostgreSQL",
+        "color": "text-blue-400"
+      },
+      {
+        "React": "nf nf-dev-react",
+        "name": "React",
+        "color": "text-blue-500"
+      },
+      {
+        "Tailwind": "nf nf-md-tailwind",
+        "name": "Tailwind",
+        "color": "text-cyan-400"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      },
+      {
+        "docker": "nf nf-md-docker",
+        "name": "Docker",
+        "color": "text-blue-700"
+      }
     ]
-    },
-    {
-        "name": "Sistema gestor de proyectos",
-        "description": "Gestor de proyectos que implementa seguridad y control de acceso a los recursos. Proyecto colaborativo.",
-        "github": "https://github.com/FrankRojas31/sgp-app",
-        "pictures": [
-            "sgp_dashboard.jpg",
-            "sgp_login.jpg","sgp_members.jpg"
-        ],
-        "website": "https://sgp-app.herokuapp.com",
-        "technologies": ["nf nf-md-nodejs", "nf nf-md-language_typescript", "nf nf-dev-javascript_badge", "nf nf-dev-mysql", "nf nf-dev-react", "nf nf-md-tailwind", "nf nf-dev-css3", "nf nf-md-docker"]
-    },
-    {
-        "name": "UTuri",
-        "description": "Aplicación web para agencias de viajes en Cancún. Proyecto colaborativo.",
-        "github": "https://github.com/SublimeDevv/UT-uri",
-        "pictures": [
-            "uturi_login.jpg",
-            "uturi_content.jpg"
-        ],
-        "website": "https://uturi.herokuapp.com",
-        "technologies": ["nf nf-md-nodejs", "nf nf-dev-javascript_badge", "nf nf-dev-mysql", "nf nf-dev-react", "nf nf-dev-css3", "nf nf-dev-css3"]
-    },
-    {
-        "name": "PokeSublime",
-        "description": "Aplicación web para buscar y ver información de pokemones.",
-        "github": "https://github.com/SublimeDevv/Poke-Sublime",
-        "pictures": [
-            "poke_app.jpg"
-        ],
-        "website": "https://poke-sublime.herokuapp.com",
-        "technologies": ["nf nf-dev-javascript_badge", "nf nf-dev-css3", "nf nf nf-dev-html5"]
-    },
-    {
-        "name": "TodoApp",
-        "description": "Aplicación móvil para gestionar tareas.",
-        "github": "",
-        "pictures": [
-            "todo_app.jpg"
-        ],
-        "website": "https://todo-app.sublimedevv.vercel.app",
-        "technologies": ["nf nf-dev-javascript_badge", "nf nf-dev-css3", "nf nf-dev-react", "nf nf-dev-postgresql"]
-    },
-    {
-        "name": "TodoLinkedList",
-        "description": "Aplicación web para gestionar tareas usando listas enlazadas.",
-        "github": "https://github.com/SublimeDevv/todo-linkedlist",
-        "pictures": [
-            "linked_todo.jpg",
-            "linked_todo_content.jpg"
-        ],
-        "website": "https://todo-linkedlist.vercel.app",
-        "technologies": ["nf nf-dev-javascript_badge", "nf nf-dev-css3", "nf nf-dev-react"]
-    }
-    
+  },
+  {
+    "name": "Sistema gestor de proyectos",
+    "description": "Gestor de proyectos que implementa seguridad y control de acceso a los recursos. Proyecto colaborativo.",
+    "github": "https://github.com/FrankRojas31/sgp-app",
+    "pictures": ["sgp_dashboard.jpg", "sgp_login.jpg", "sgp_members.jpg"],
+    "website": "https://sgp-app.herokuapp.com",
+    "technologies": [
+      {
+        "nodejs": "nf nf-md-nodejs",
+        "name": "Node.js",
+        "color": "text-green-500"
+      },
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "MySQL": "nf nf-dev-mysql",
+        "name": "MySQL",
+        "color": "text-blue-500"
+      },
+      {
+        "React": "nf nf-dev-react",
+        "name": "React",
+        "color": "text-blue-500"
+      },
+      {
+        "Tailwind": "nf nf-md-tailwind",
+        "name": "Tailwind",
+        "color": "text-cyan-400"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      },
+      {
+        "docker": "nf nf-md-docker",
+        "name": "Docker",
+        "color": "text-blue-700"
+      }
+    ]
+  },
+  {
+    "name": "UTuri",
+    "description": "Aplicación web para agencias de viajes en Cancún. Proyecto colaborativo.",
+    "github": "https://github.com/SublimeDevv/UT-uri",
+    "pictures": ["uturi_login.jpg", "uturi_content.jpg"],
+    "website": "https://uturi.herokuapp.com",
+    "technologies": [
+      {
+        "nodejs": "nf nf-md-nodejs",
+        "name": "Node.js",
+        "color": "text-green-500"
+      },
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "MySQL": "nf nf-dev-mysql",
+        "name": "MySQL",
+        "color": "text-blue-500"
+      },
+      {
+        "React": "nf nf-dev-react",
+        "name": "React",
+        "color": "text-blue-500"
+      },
+
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      }
+    ]
+  },
+  {
+    "name": "PokeSublime",
+    "description": "Aplicación web para buscar y ver información de pokemones.",
+    "github": "https://github.com/SublimeDevv/Poke-Sublime",
+    "pictures": ["poke_app.jpg"],
+    "website": "https://poke-sublime.herokuapp.com",
+    "technologies": [
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      },
+      {
+        "HTML5": "nf nf nf-dev-html5",
+        "name": "HTML5",
+        "color": "text-orange-500"
+      }
+    ]
+  },
+  {
+    "name": "TodoApp",
+    "description": "Aplicación móvil para gestionar tareas.",
+    "github": "",
+    "pictures": ["todo_app.jpg"],
+    "website": "https://todo-app.sublimedevv.vercel.app",
+    "technologies": [
+      {
+        "React": "nf nf-dev-react",
+        "name": "React Native",
+        "color": "text-blue-500"
+      },
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      }
+    ]
+  },
+  {
+    "name": "TodoLinkedList",
+    "description": "Aplicación web para gestionar tareas usando listas enlazadas.",
+    "github": "https://github.com/SublimeDevv/todo-linkedlist",
+    "pictures": ["linked_todo.jpg", "linked_todo_content.jpg"],
+    "website": "https://todo-linkedlist.vercel.app",
+    "technologies": [
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      },
+      {
+        "React": "nf nf-dev-react",
+        "name": "React",
+        "color": "text-blue-500"
+      }
+    ]
+  }
 ]

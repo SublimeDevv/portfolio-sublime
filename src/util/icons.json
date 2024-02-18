@@ -5,7 +5,7 @@
       "name": "Node.js",
       "color": "text-green-500"
     },
-    
+
     {
       "git": "nf nf-dev-git",
       "name": "Git",
@@ -100,11 +100,12 @@
       "color": "text-red-500"
     }
   ],
-  "databases": [{
-    "firebase": "nf nf-md-firebase",
-    "name": "Firebase",
-    "color": "text-yellow-500"
-  },
+  "databases": [
+    {
+      "firebase": "nf nf-md-firebase",
+      "name": "Firebase",
+      "color": "text-yellow-500"
+    },
     {
       "MySQL": "nf nf-dev-mysql",
       "name": "MySQL",
@@ -178,7 +179,7 @@
       "color": "text-green-500"
     }
   ],
- 
+
   "frameworks": [
     {
       "React": "nf nf-dev-react",
@@ -186,7 +187,6 @@
       "color": "text-blue-500"
     },
     {
-
       "Laravel": "nf nf-md-laravel",
       "name": "Laravel",
       "color": "text-red-400"
@@ -219,7 +219,7 @@
       "url": "https://top.gg/user/220029357903249408"
     }
   ],
-  "office":  [
+  "office": [
     {
       "Word": "nf nf-seti-word",
       "name": "Word",

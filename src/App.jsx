@@ -7,11 +7,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./styles.css";
 
-import { Navbar, Card, Timeline, Profile, Aboutme, Separator, Title, StackCard } from "./Components";
+import {
+  Navbar,
+  Card,
+  Timeline,
+  Profile,
+  Aboutme,
+  Separator,
+  Title,
+  StackCard,
+  ProjectCard,
+} from "./Components";
 
-import stacks from "./util/stacks.json";
+import projects from "./util/projects.json";
+
 import { cardData, experiences, stackData } from "./data";
-
 
 export default function App() {
   return (
@@ -75,107 +85,22 @@ export default function App() {
         <Title text="Proyectos" additionalStyles="mt-10" />
 
         {/* {Projects} */}
-        <div className="flex flex-col md:flex-row ml-16 mr-16 mb-10">
-          <div className="flex-none md:mr-10 mb-4 md:mb-0">
-            <img
-              className="w-96 md:w-96 md:h-72 h-auto p-1 rounded-2xl"
-              src="/juan.png"
-              alt="Bordered avatar"
+
+        {projects.map((project, index) => {
+          const { name, description, github, technologies, website, pictures } =
+            project;
+          return (
+            <ProjectCard
+              key={index}
+              imageUrl={pictures}
+              title={name}
+              linkUrl={website}
+              description={description}
+              iconStack={technologies}
+              reverse={index % 2 === 0}
             />
-          </div>
-
-          <div className="flex-grow ml-4 justify-left">
-            <h1 className="text-3xl font-bold mb-3">
-              Niux Comercio electronico
-            </h1>
-            <a
-              href="https://shots.so/"
-              className="text-blue-500 hover:underline inline-flex items-center"
-            >
-              https://shots.so/
-              <i className="ml-2 nf nf-fa-external_link"></i>
-            </a>
-            <h2 className="mt-3 text-gray-500 dark:text-gray-400">
-              Flowbite helps you connect with friends, family and communities of
-              people who share your interests. Connecting with your friends and
-              family as well as discovering new ones is easy with features like
-              Groups.
-            </h2>
-            <div className="mb-4 mt-3 flex flex-wrap gap-5 text-[40px] text-gray-300">
-              {stacks.office.map((icon, index) => {
-                const [iconName, iconClass] = Object.values(icon);
-                const hoverColor = icon.color;
-                const tooltipText = icon.name;
-
-                return (
-                  <a
-                    key={index}
-                    className={`tooltip hover:${hoverColor}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={iconName}>{/* Icono */}</i>
-                    <span className="tooltiptext">{tooltipText}</span>
-                  </a>
-                );
-              })}
-            </div>
-            <button className="bg-blue-700 rounded-md font-normal w-36 h-7 text-xs justify-center">
-              <i className="nf nf-fa-github mr-2"></i>Ver repositorio
-            </button>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row ml-16 mr-16 mb-10">
-          <div className="order-2 md:order-1 flex-grow mr-4 justify-left">
-            <h1 className="text-3xl font-bold mb-3">
-              Niux Comercio electronico
-            </h1>
-            <a
-              href="https://shots.so/"
-              className="text-blue-500 hover:underline inline-flex items-center"
-            >
-              https://shots.so/
-              <i className="ml-2 nf nf-fa-external_link"></i>
-            </a>
-            <h2 className="mt-3 text-gray-500 dark:text-gray-400">
-              Flowbite helps you connect with friends, family and communities of
-              people who share your interests. Connecting with your friends and
-              family as well as discovering new ones is easy with features like
-              Groups.
-            </h2>
-            <div className="mb-4 mt-3 flex flex-wrap gap-5 text-[40px] text-gray-300">
-              {stacks.office.map((icon, index) => {
-                const [iconName, iconClass] = Object.values(icon);
-                const hoverColor = icon.color;
-                const tooltipText = icon.name;
-
-                return (
-                  <a
-                    key={index}
-                    className={`tooltip hover:${hoverColor}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={iconName}>{/* Icono */}</i>
-                    <span className="tooltiptext">{tooltipText}</span>
-                  </a>
-                );
-              })}
-            </div>
-            <button className="bg-blue-700 rounded-md font-normal w-36 h-7 text-xs justify-center">
-              <i className="nf nf-fa-github mr-2"></i>Ver repositorio
-            </button>
-          </div>
-
-          <div className="order-1 md:order-2 flex-none md:ml-10 mb-4 md:mb-0 ">
-            <img
-              className="w-96 md:w-96 md:h-72 h-auto p-1 rounded-2xl"
-              src="/mockups/login_niux.jpg"
-              alt="Bordered avatar"
-            />
-          </div>
-        </div>
+          );
+        })}
 
         {/* <div className="mr-16 ml-16 w-full h-96 pr-32 mb-10">
         <Swiper

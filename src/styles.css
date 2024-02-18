@@ -1,20 +1,74 @@
-.swiper {
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; 
+}
+
+.modal-content {
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  z-index: 1001;
+  max-width: 80%; 
+  width: 100%;
+  height: 80vh; 
+}
+
+.mySwiper {
+  width: 100%; 
+  height: 100%; 
 }
 
 .swiper-slide img {
-  border-radius: 10px;
-  display: block;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 10px;
+    max-width: 90%; 
+    height: 90vh; 
+  }
+
+  .swiper-slide img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    border-radius: 5px; 
+    max-width: 95%; 
+    height: 95vh; 
+    padding: 5px;
+  }
+
+  .swiper-slide img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal-content {
+    border-radius: 5px;
+    max-width: 100%; 
+    height: auto; 
+    max-height: 95vh;
+    padding: 5px; 
+  }
+
+  .swiper-slide img {
+    object-fit: contain; 
+  }
 }
