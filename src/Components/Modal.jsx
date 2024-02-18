@@ -9,17 +9,21 @@ import "./../styles.css";
 const Modal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
+  const handleClose = (e) => {
+    e.stopPropagation();
+    onClose();
+  };
+
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div
-        className="modal-close-area"
-        onClick={onClose}
-        onTouchEnd={onClose}
-      ></div>
+    <div
+      className="modal-backdrop"
+      onClick={handleClose}
+      onTouchStart={handleClose}
+    >
       <div
         className="modal-content"
         onClick={(e) => e.stopPropagation()}
-        onTouchEnd={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
       >
         <Swiper
           cssMode={true}
