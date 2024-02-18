@@ -8,14 +8,13 @@ export const ProjectCard = ({
   description,
   iconStack,
   reverse,
+  github,
 }) => {
-
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
-
 
   return (
     <div className="flex flex-col md:flex-row ml-16 mr-16 mb-10">
@@ -25,8 +24,8 @@ export const ProjectCard = ({
         }`}
       >
         <img
-          className="w-96 md:w-96 md:h-72 h-auto p-1 rounded-2xl"
-          src={"/mockups/"+imageUrl[0]}
+          className="cursor-pointer w-96 md:w-96 md:h-72 h-auto p-1 rounded-2xl"
+          src={"/mockups/" + imageUrl[0]}
           alt="Project avatar"
           onClick={toggleModal}
         />
@@ -56,7 +55,14 @@ export const ProjectCard = ({
           ))}
         </div>
         <button className="bg-blue-700 rounded-md font-normal w-36 h-7 text-xs justify-center">
-          <i className="nf nf-fa-github mr-2"></i>Ver repositorio
+          <a
+            href={github}
+            className="inline-block bg-blue-700 rounded-md font-normal w-36 h-7 text-xs text-center leading-7 text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="nf nf-fa-github mr-2"></i>Ver repositorio
+          </a>
         </button>
         <Modal isOpen={modalOpen} onClose={toggleModal} images={imageUrl} />
       </div>

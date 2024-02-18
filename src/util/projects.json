@@ -160,7 +160,7 @@
   {
     "name": "TodoApp",
     "description": "Aplicación móvil para gestionar tareas.",
-    "github": "",
+    "github": "https://github.com/SublimeDevv/todo-app-react",
     "pictures": ["todo_app.jpg"],
     "website": "https://todo-app.sublimedevv.vercel.app",
     "technologies": [

@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import React from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,7 +40,7 @@ export default function App() {
 
           <Title additionalStyles="mt-10" />
 
-          {/* {Linea del tiempo } */}
+          {/* { Timeline } */}
           <ol className="relative border-s border-gray-200 dark:border-gray-700">
             {experiences.map((experience, index) => (
               <Timeline key={index} {...experience} />
@@ -82,57 +80,34 @@ export default function App() {
 
         <Separator my={"my-2"} />
 
-        <Title text="Proyectos" additionalStyles="mt-10" />
+        <Title text="Proyectos" additionalStyles="mt-10 mb-10" />
 
         {/* {Projects} */}
 
-        {projects.map((project, index) => {
-          const { name, description, github, technologies, website, pictures } =
-            project;
-          return (
-            <ProjectCard
-              key={index}
-              imageUrl={pictures}
-              title={name}
-              linkUrl={website}
-              description={description}
-              iconStack={technologies}
-              reverse={index % 2 === 0}
-            />
-          );
-        })}
-
-        {/* <div className="mr-16 ml-16 w-full h-96 pr-32 mb-10">
-        <Swiper
-        cssMode={true}
-        navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-          
-      </Swiper>
-        </div> */}
+        <div className="mt-16">
+          {projects.map((project, index) => {
+            const {
+              name,
+              description,
+              github,
+              technologies,
+              website,
+              pictures,
+            } = project;
+            return (
+              <ProjectCard
+                key={index}
+                imageUrl={pictures}
+                github={github}
+                title={name}
+                linkUrl={website}
+                description={description}
+                iconStack={technologies}
+                reverse={index % 2 === 0}
+              />
+            );
+          })}
+        </div>
       </section>
     </main>
   );
