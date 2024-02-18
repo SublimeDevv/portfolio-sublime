@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -14,10 +14,10 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const [current, setCurrent] = useState("#home"); // Estado inicial es el primer elemento
+  const [current, setCurrent] = useState("#home");
 
   const updateCurrent = (href) => {
-    setCurrent(href); // Actualiza el estado current
+    setCurrent(href); 
   };
 
   return (
@@ -26,7 +26,6 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              {/* Mobile menu button*/}
               <Disclosure.Button className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
@@ -47,7 +46,7 @@ export default function Navbar() {
                           "rounded-md px-3 py-2 text-[20px] font-medium"
                         )}
                         aria-current={item.href === current ? "page" : undefined}
-                        onClick={() => updateCurrent(item.href)} // Actualiza el estado al hacer clic
+                        onClick={() => updateCurrent(item.href)} 
                       >
                         {item.name}
                       </a>
