@@ -15,15 +15,7 @@ const Navbar = () => {
           </li>
           <li className="mx-4 lg:mx-8">
             <a
-              href="#about"
-              className="text-gray-300 px-5 py-3 hover:bg-gray-700 hover:text-blue-500 rounded transition duration-300 ease-in-out"
-            >
-              Proyectos
-            </a>
-          </li>
-          <li className="mx-4 lg:mx-8">
-            <a
-              href="#services"
+              href="#skills"
               className="text-gray-300 px-5 py-3 hover:bg-gray-700 hover:text-blue-500 rounded transition duration-300 ease-in-out"
             >
               Habilidades
@@ -31,10 +23,18 @@ const Navbar = () => {
           </li>
           <li className="mx-4 lg:mx-8">
             <a
-              href="#contact"
+              href="#experience"
               className="text-gray-300 px-5 py-3 hover:bg-gray-700 hover:text-blue-500 rounded transition duration-300 ease-in-out"
             >
-              Contacto
+              Experiencia
+            </a>
+          </li>
+          <li className="mx-4 lg:mx-8">
+            <a
+              href="#projects"
+              className="text-gray-300 px-5 py-3 hover:bg-gray-700 hover:text-blue-500 rounded transition duration-300 ease-in-out"
+            >
+              Proyectos
             </a>
           </li>
         </ul>

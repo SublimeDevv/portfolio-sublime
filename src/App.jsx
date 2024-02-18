@@ -23,7 +23,10 @@ import { cardData, experiences, stackData } from "./data";
 
 export default function App() {
   return (
-    <main className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4">
+    <main
+      id="home"
+      className="flex flex-col md:flex-row min-h-screen justify-center items-center p-4"
+    >
       <section className="max-w-full md:max-w-7xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg">
         <Navbar />
 
@@ -36,6 +39,7 @@ export default function App() {
 
           <Aboutme />
 
+          <div id="experience" />
           <Separator my={"my-2"} mt={"mt-12"} />
 
           <Title additionalStyles="mt-10" />
@@ -46,15 +50,14 @@ export default function App() {
               <Timeline key={index} {...experience} />
             ))}
           </ol>
+          <div id="skills" />
         </div>
 
         <Separator my={"my-2"} mt={"mt-[-20px]"} />
-
         <Title
           text="Habilidades y tecnologías"
           additionalStyles="mb-10 mt-10"
         />
-
         <div className="mt-10 mb-5 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 text-center gap-4">
           {cardData.map((data, index) => (
             <Card
@@ -76,6 +79,7 @@ export default function App() {
               icons={data.icons}
             />
           ))}
+          <div id="projects" />
         </div>
 
         <Separator my={"my-2"} />
