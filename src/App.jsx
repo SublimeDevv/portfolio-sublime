@@ -70,7 +70,7 @@ export default function App() {
         </div>
 
         {/* {Stacks} */}
-        <div className="mb-20 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-4">
+        <div className="mb-10 ml-16 mr-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-4">
           {stackData.map((data, index) => (
             <StackCard
               key={index}
