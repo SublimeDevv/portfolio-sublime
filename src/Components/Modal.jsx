@@ -9,17 +9,13 @@ import "./../styles.css";
 const Modal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
-  const handleClose = (e) => {
-    e.stopPropagation();
-    onClose();
-  };
-
   return (
-    <div
-      className="modal-backdrop"
-      onClick={handleClose}
-      onTouchEnd={handleClose}
-    >
+    <div className="modal-backdrop" onClick={onClose}>
+      <div
+        className="modal-close-area"
+        onClick={onClose}
+        onTouchEnd={onClose}
+      ></div>
       <div
         className="modal-content"
         onClick={(e) => e.stopPropagation()}

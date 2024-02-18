@@ -72,3 +72,30 @@
     object-fit: contain; 
   }
 }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; 
+}
+
+.modal-close-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2; /* Asegúrate de que el contenido esté por encima del área "clicable" */
+  /* Estilos adicionales para tu contenido */
+}
