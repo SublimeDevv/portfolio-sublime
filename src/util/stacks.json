@@ -17,20 +17,11 @@
       "color": "text-blue-500"
     },
     {
-      "PHP": "nf nf-dev-php",
-      "name": "PHP",
-      "color": "text-purple-500"
-    },
-    {
       "React": "nf nf-dev-react",
       "name": "React",
       "color": "text-blue-500"
     },
-    {
-      "Laravel": "nf nf-md-laravel",
-      "name": "Laravel",
-      "color": "text-red-400"
-    },
+  
     {
       "Tailwind": "nf nf-md-tailwind",
       "name": "Tailwind",
@@ -38,6 +29,11 @@
     }
   ],
   "backend": [
+    {
+      "Laravel": "nf nf-md-laravel",
+      "name": "Laravel",
+      "color": "text-red-400"
+    },
     {
       "Python": "nf nf-dev-python",
       "name": "Python",
