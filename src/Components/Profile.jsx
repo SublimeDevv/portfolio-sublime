@@ -11,7 +11,7 @@ const Profile = () => {
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="mb-6 md:mb-0 md:mr-6">
           <img
-            className="w-60 h-60  p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+            className="w-60 h-60  p-1 rounded-full ring-2 ring-gray-500"
             src="/juan.png"
             alt="Bordered avatar"
           />

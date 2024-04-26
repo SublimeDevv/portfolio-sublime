@@ -45,7 +45,7 @@ export default function App() {
           <Title additionalStyles="mt-10" />
 
           {/* { Timeline } */}
-          <ol className="relative border-s border-gray-200 dark:border-gray-700">
+          <ol className="relative border-s border-gray-700">
             {experiences.map((experience, index) => (
               <Timeline key={index} {...experience} />
             ))}

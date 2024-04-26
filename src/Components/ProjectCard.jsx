@@ -40,7 +40,7 @@ export const ProjectCard = ({
           {linkUrl}
           <i className="ml-2 nf nf-fa-external_link"></i>
         </a>
-        <h2 className="mt-3 text-gray-500 dark:text-gray-400">{description}</h2>
+        <h2 className="mt-3 text-gray-400">{description}</h2>
         <div className="mb-4 mt-3 flex flex-wrap gap-5 text-[40px] text-gray-300">
           {iconStack.map((icon, index) => (
             <a

@@ -1,7 +1,7 @@
 import { Icon } from "./Icon";
 
 export const StackCard = ({ title, subtitle, icons }) => (
-  <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div className="max-w-sm p-6  rounded-lg shadow bg-gray-800 border-gray-700">
     <div className="relative mb-16 px-3 lg:mb-0">
       <div className="flex justify-center">
         <span className="text-primary text-7xl">
@@ -18,7 +18,7 @@ export const StackCard = ({ title, subtitle, icons }) => (
         </span>
       </div>
       <h5 className="mb-2 font-bold text-primary">{title}</h5>
-      <h6 className="mb-0 font-normal dark:text-neutral-50 justify-center">
+      <h6 className="mb-0 font-normal text-neutral-50 justify-center">
         {subtitle}
       </h6>
     </div>
