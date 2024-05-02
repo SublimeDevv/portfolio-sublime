@@ -1,5 +1,46 @@
 [
   {
+    "name": "Sistema de gestión de estadías",
+    "description": "Aplicación web para gestionar el proceso de la estadías de la universidad tecnológica de Cancún.",
+    "github": "https://github.com/SGE-PROJECT/sge-project",
+    "pictures": ["first.jpg", "01.png", "asesor.png", "calendario.png", "F.png", "calificar.png", "poryectos.png", "Selección_002.png", "Selección_008.png", "Selección_009.png", "Selección_010.png", "notificaciones.png"],
+    
+    "technologies": [
+      {
+        "laravel": "nf nf-fa-laravel",
+        "name": "Laravel",
+        "color": "text-red-500"
+      },
+      {
+        "nodejs": "nf nf-md-nodejs",
+        "name": "Node.js",
+        "color": "text-green-500"
+      },
+      {
+        "JavaScript": "nf nf-dev-javascript_badge",
+        "name": "JavaScript",
+        "color": "text-yellow-500"
+      },
+      {
+        "MySQL": "nf nf-dev-mysql",
+        "name": "MySQL",
+        "color": "text-blue-500"
+      },
+   
+      {
+        "Tailwind": "nf nf-md-tailwind",
+        "name": "Tailwind",
+        "color": "text-cyan-400"
+      },
+      {
+        "CSS3": "nf nf-dev-css3",
+        "name": "CSS3",
+        "color": "text-blue-500"
+      }
+   
+    ]
+  },
+  {
     "name": "Niux",
     "description": "Tienda en línea de productos de tecnología. Proyecto colaborativo para la asignatura de Desarrollo de Aplicaciones Web.",
     "github": "https://github.com/Angel-Guxman/niux_frontend",
