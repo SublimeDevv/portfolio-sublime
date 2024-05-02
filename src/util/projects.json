@@ -1,7 +1,7 @@
 [
   {
     "name": "Sistema de gestión de estadías",
-    "description": "Aplicación web para gestionar el proceso de la estadías de la universidad tecnológica de Cancún.",
+    "description": "Aplicación web desarrollada en equipo para gestionar el proceso de la estadías de la universidad tecnológica de Cancún.",
     "github": "https://github.com/SGE-PROJECT/sge-project",
     "pictures": ["first.jpg", "01.png", "asesor.png", "calendario.png", "F.png", "calificar.png", "poryectos.png", "Selección_002.png", "Selección_008.png", "Selección_009.png", "Selección_010.png", "notificaciones.png"],
     
